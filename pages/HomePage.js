@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useCallback } from 'react';
-import { ScrollView, View, Text, Button } from "react-native";
+import { ScrollView, View, Text, Button, Image } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
@@ -32,28 +32,28 @@ export default function HomePage({ navigation }) {
         <View style={tw`w-72 h-30 bg-orange-200 items-center justify-center rounded-3`}>
           <Text style={{ fontFamily: 'PoppinsRegular'}}>Pengenalan</Text>
         </View>
-        <View style={tw`w-30 h-30 bg-orange-200 items-center justify-center rounded-3`}>
+        <View style={tw`w-30 h-30 bg-orange-100 items-center justify-center rounded-3`}>
           <Text style={{ fontFamily: 'PoppinsRegular'}}>Struktur HTML</Text>
         </View>
-        <View style={tw`w-30 h-30 bg-orange-200 items-center justify-center rounded-3`}>
+        <View style={tw`w-30 h-30 bg-orange-100 items-center justify-center rounded-3`}>
           <Text style={{ fontFamily: 'PoppinsRegular'}}>Heading</Text>
         </View>
-        <View style={tw`w-30 h-30 bg-orange-200 items-center justify-center rounded-3`}>
+        <View style={tw`w-30 h-30 bg-orange-100 items-center justify-center rounded-3`}>
           <Text style={{ fontFamily: 'PoppinsRegular'}}>Image</Text>
         </View>
-        <View style={tw`w-30 h-30 bg-orange-200 items-center justify-center rounded-3`}>
+        <View style={tw`w-30 h-30 bg-orange-100 items-center justify-center rounded-3`}>
           <Text style={{ fontFamily: 'PoppinsRegular'}}>List</Text>
         </View>
-        <View style={tw`w-30 h-30 bg-orange-200 items-center justify-center rounded-3`}>
+        <View style={tw`w-30 h-30 bg-orange-100 items-center justify-center rounded-3`}>
           <Text style={{ fontFamily: 'PoppinsRegular'}}>Table</Text>
         </View>
-        <View style={tw`w-30 h-30 bg-orange-200 items-center justify-center rounded-3`}>
+        <View style={tw`w-30 h-30 bg-orange-100 items-center justify-center rounded-3`}>
           <Text style={{ fontFamily: 'PoppinsRegular'}}>Canvas</Text>
         </View>
-        <View style={tw`w-30 h-30 bg-orange-200 items-center justify-center rounded-3`}>
+        <View style={tw`w-30 h-30 bg-orange-100 items-center justify-center rounded-3`}>
           <Text style={{ fontFamily: 'PoppinsRegular'}}>iFrame</Text>
         </View>
-        <View style={tw`w-30 h-30 bg-orange-200 items-center justify-center rounded-3`}>
+        <View style={tw`w-30 h-30 bg-orange-100 items-center justify-center rounded-3`}>
           <Text style={{ fontFamily: 'PoppinsRegular'}}>Form</Text>
         </View>
       </View>
