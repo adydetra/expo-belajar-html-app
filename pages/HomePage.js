@@ -1,6 +1,6 @@
 import * as React from "react";
 import { useCallback } from 'react';
-import { ScrollView, View, Text } from "react-native";
+import { ScrollView, View, Text, Button } from "react-native";
 import { StatusBar } from 'expo-status-bar';
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
@@ -23,7 +23,7 @@ export default function HomePage({ navigation }) {
   }
 
   return (
-    <ScrollView style={tw`bg-orange-50 h-full`}>
+    <ScrollView style={tw`bg-gray-900 h-full`}>
       <StatusBar style="auto" />
       <View style={tw`flex flex-row flex-wrap my-10 justify-center gap-12`} onLayout={onLayoutRootView}>
         <View style={tw`w-80 h-30 bg-orange-200 items-center justify-center rounded-3`}>

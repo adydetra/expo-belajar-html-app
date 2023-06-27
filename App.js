@@ -1,14 +1,14 @@
 import "react-native-gesture-handler";
 import * as React from "react";
 import { useCallback } from 'react';
-import { SafeAreaView, View, Text } from "react-native";
+import { SafeAreaView, View, Text, Image } from "react-native";
 import { useFonts } from 'expo-font';
 import tw from 'twrnc';
 
 import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
-// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator, DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer';
+// import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 // import Ionicons from 'react-native-vector-icons/Ionicons';
 
@@ -17,15 +17,15 @@ import PersiapanPage from "./pages/PersiapanPage";
 import PengenalanPage from "./pages/PengenalanPage";
 import StrukturPage from "./pages/StrukturPage";
 
-// const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
+// const Tab = createBottomTabNavigator();
 
 function CustomDrawerContent(props) {
   return (
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
       <View>
-        <DrawerItem label="" style={tw`bg-orange-100 -mx-2`}/>
         {/* <DrawerItem label="1. Persiapan" style={tw``} onPress={() => {
               props.navigate('PersiapanPage');
             }}/>
@@ -52,28 +52,38 @@ export default function App(props) {
     return null;
   }
 
+  const navigatorOptionStyle = {
+    drawerActiveTintColor: 'rgb(251 146 60)',
+    drawerActiveBackgroundColor: 'rgb(75 85 99)',
+    drawerInactiveTintColor: '#aaa',
+    drawerInactiveBackgroundColor: 'transparent',
+    drawerStyle: {
+      backgroundColor: 'rgb(17 24 39)',
+      width: 260,
+    },
+    headerTitleStyle: {
+      fontFamily: "PoppinsRegular",
+    },
+    headerStyle: {
+      backgroundColor: 'rgb(251 146 60)',
+    },
+    headerTitleAlign: 'center',
+  };
+
+  const screenOptionStyle = {
+    headerTitle: () => <Image source={require('./assets/html.png')} />,
+    headerRight: () => <Text style={tw`mr-3`}>Dev Dewa 🚀</Text>,
+  };
+
   return (
     <NavigationContainer style={tw`bg-orange-500`}>
       <Drawer.Navigator
         drawerContent={props => <CustomDrawerContent {...props} />}
-        screenOptions={{
-          drawerStyle: {
-            backgroundColor: 'rgb(255 247 237)',
-            width: 260,
-          },
-          headerTitleStyle: {
-            fontFamily: "PoppinsRegular"
-          },
-          headerStyle: {
-            backgroundColor: 'rgb(251 146 60)',
-          },
-          headerTitleAlign: 'center',
-        }}>
-        <Drawer.Screen name="Home" component={HomePage} options={{ headerTitle: 'Belajar HTML' }} />
-        <Drawer.Screen name="1. Persiapan" component={PersiapanPage} />
-        <Drawer.Screen name="2. Pengenalan HTML" component={PengenalanPage} />
-        <Drawer.Screen name="3. Struktur HTML" component={StrukturPage} />
-     
+        screenOptions={navigatorOptionStyle}>
+        <Drawer.Screen name="Home" component={HomePage} options={screenOptionStyle} />
+        <Drawer.Screen name="1. Persiapan" component={PersiapanPage} options={screenOptionStyle}/>
+        <Drawer.Screen name="2. Pengenalan HTML" component={PengenalanPage} options={screenOptionStyle}/>
+        <Drawer.Screen name="3. Struktur HTML" component={StrukturPage} options={screenOptionStyle}/>
       </Drawer.Navigator>
     </NavigationContainer>
   );
