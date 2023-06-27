@@ -2,7 +2,7 @@
 
 <p align="center">
   <a href="https://expo.dev/">
-    <img alt="expo sdk" height="128" src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/q4q8emquy5eivdz4quk7">
+    <img alt="expo sdk" height="128" src="https://hidev.cc/wp-content/uploads/2021/11/react-native-expo-e1636065072541.png">
     <h1 align="center">Expo</h1>
   </a>
 </p>
