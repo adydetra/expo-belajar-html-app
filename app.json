@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "BelajarHTML",
+    "name": "Belajar HTML",
     "slug": "BelajarHTML",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.dev_dewa.BelajarHTML"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "d0499530-c251-4d71-8af3-7522c30530cb"
+      }
     }
   }
 }
